@@ -8,11 +8,19 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-
+.header_logo {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  width: 184px;
+  height: 32px;
+}
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
+  background-color: black;
   /* выше установили ограничения для секции */
 }
 
@@ -25,7 +33,6 @@
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
   margin-right: 0;
   margin-top: 80px;
 }
