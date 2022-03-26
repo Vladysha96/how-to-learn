@@ -8,7 +8,15 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-
+section, div, ul, p, a, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
                         /*1 часть*/
 .header {
   height: 100vh;
@@ -18,9 +26,10 @@
   position: relative;
   align-items: center;
   overflow: hidden;
+}
+.header_style {
   background-color: #f2f2f2;
   color: black;
-  /* выше установили ограничения для секции */
 }
 .logo {
   position: absolute;
@@ -32,11 +41,10 @@
 .logo_place_header {
   z-index: 2;
 }
+
 .header__title { /*текст header*/
-  margin: 0;
+  margin-left: 64px;
   width: 730px;
-  position: absolute;
-  left: 64px;
   flex-wrap: wrap;
   z-index: 2;
   line-height: 96px;
@@ -44,7 +52,6 @@
   font-weight: 600;
 }
 .header__subtitle { /*текст со ссылкой*/
-  margin: 0;
   width: 388px;
   line-height: 25px;
   font-size: 18px;
@@ -56,7 +63,6 @@
   z-index: 2;
 }
 .header__link {
-  margin: 0;
   text-decoration: none;
 }
 .header__main-illustation {
@@ -83,10 +89,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+}
+.description__style {
   color: black;
 }
 .two-columns {
-  margin-top: 100px;
   width: 80%;
   position: relative;
   display: flex;
@@ -94,7 +101,7 @@
   justify-content: space-between;
 }
 .two-columns__brief {
-  margin: 0;
+  margin-top: 100px;
   width: 175px;
   flex-wrap: wrap;
   line-height: 1.2;
@@ -102,8 +109,8 @@
   font-weight: normal;
   color: #42aaff;
 }
+
 .two-columns__main-text {
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -112,19 +119,23 @@
   flex-wrap: wrap;
 }
 .two-columns__paragraph {
-  margin: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   flex-wrap: wrap;
 }
+
 .two-columns__span-accent {
+  margin: 30px auto;
   line-height: 34px;
   font-size: 24px;
   flex-wrap: wrap;
 }
 span.bold {
   font-weight: bold;
+}
+.two-columns__paragraph:first-child {
+  margin-top: 100px;
 }
 
                       /*3 часть*/
@@ -137,8 +148,6 @@ span.bold {
   color: black;
 }
 .section-title {
-  margin: 0;
-  padding: 0;
   width: 60%;
   line-height: 1.15;
   font-size: 60px;
@@ -148,7 +157,6 @@ span.bold {
 
 .section-subtitle {
   margin: 20px 0 0;
-  padding: 0;
   width: 60%;
   line-height: 34px;
   font-size: 24px;
@@ -157,32 +165,31 @@ span.bold {
 }
 
 .table {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 1100px;
   flex-wrap: wrap;
 }
+
 /*Ячейки с данными*/
 .table__cell {
-  margin: 60px 0 0 0;
-  padding: 0;
+  margin: 60px 0 0;
   width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .table__heading {
-  margin: 0;
-  padding: 0;
+  width: 100%;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
 }
 
 .table__text {
-  margin: 20px 0 0 0;
-  padding: 0;
+  margin: 20px 0 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -190,16 +197,17 @@ span.bold {
 
                         /*4 часть*/
 .feynman {
-  margin: 0;
   height: 890px;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(/images/feynman.png);
+  background-image: url(../images/feynman.png);
   background-position: bottom left;
   background-repeat: no-repeat;
+}
+.feynman_style {
   background-color: #f2f2f2;
   color: black;
 }
@@ -215,7 +223,6 @@ span.bold {
 
 .feynman__subtitle {
   margin: 70px auto 0;
-  padding: 0;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -225,8 +232,6 @@ span.bold {
   position: absolute;
   right: 48px;
   top: 50%;
-  margin: 0;
-  padding: 0;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -234,14 +239,15 @@ span.bold {
 
                           /*5 часть*/
 .kaufman {
-  margin: 0;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content:space-between;
   align-items: center;
   overflow: hidden;
-  background-color: #1f1f1f;
+}
+.kaufman_dark {
+background-color: #1f1f1f;
   color: white;
 }
 .kaufman__triangle {
@@ -256,68 +262,28 @@ span.bold {
 
 .section-title_theme_dark {
   margin: 90px auto 0;
-  padding: 0;
-  width: 60%;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 600;
-  text-align: center;
   z-index: 1;
 }
-
 .section-subtitle_theme_dark {
-  margin: 20px auto 0;
-  padding: 0;
-  width: 60%;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  text-decoration: none;
-  text-align: center;
   z-index: 1;
 }
-
 .table_theme_dark {
   margin: 0 auto 90px;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1100px;
-  flex-wrap: wrap;
   z-index: 1;
 }
 .table__cell_theme_dark {
   margin: 80px 0 0;
-  padding: 0;
   width: 200px;
-}
-/*Заголовок ячейки*/
-.table__heading_theme_dark {
-  margin: 0;
-  padding: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-/*Информация ячейки*/
-.table__text_theme_dark {
-  margin: 20px 0 0;
-  padding: 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
 }
 
                           /*6 часть*/
 .footer {
   display: flex;
+  min-height: 350px;
+}
+.footer_dark {
   background-color: #1f1f1f;
   color: white;
-  justify-content: center;
-  width: 100%;
-  min-height: 350px;
 }
 .footer__columns {
   margin: 60px auto 40px;
@@ -325,50 +291,41 @@ span.bold {
   position: relative;
   flex-direction: row;
   justify-content: space-between;
-  box-sizing: content-box;
   width: 90%;
 }
+
 /*Первый столбец*/
-.footer__columns_content_copyright {
+.footer__column_content_copyright {
   margin: 0;
-  padding: 0;
   flex-basis: 711px;
+  align-items: flex-end;
   display: flex;
   position: relative;
-  flex-direction: row;
-  justify-content: space-between;
 }
+
 /*Второй столбец*/
-.footer__columns_content_info {
+.footer__column_content_info {
   margin: 0;
-  padding: 0;
-  position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: auto;
 }
+
 /*Третий столбец*/
-.footer__columns_content_social {
+.footer__column_content_social {
   margin: 0;
-  padding: 0;
-  position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: auto;
 }
+
 .logo_place_footer {
-  margin: 0;
-  position: absolute;
+  height: 35px;
   top: 0;
   left: 0;
-  height: 35px;
 }
 .footer__author {
   margin: 18px auto;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -391,8 +348,6 @@ span.bold {
 }
 /*Текст Второго и Третьего столбца*/
 .footer__column-link {
-  margin: 0;
-  padding: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
@@ -414,11 +369,4 @@ span.bold {
 .link_text {
   text-decoration: none;
   color: #2f80ed;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style-type: none;
 }
