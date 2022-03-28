@@ -33,6 +33,7 @@
 
 .header__title { /*текст header*/
   padding: 0;
+  margin: 0;
   margin-left: 64px;
   width: 730px;
   z-index: 2;
@@ -54,6 +55,7 @@
 }
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 .header__main-illustation {
   position: absolute;
@@ -236,6 +238,8 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
 }
 
                           /*5 часть*/
@@ -255,7 +259,7 @@
   width: 877px;
   height: 877px;
   z-index: 0;
-  background-size: cover;
+  background-size: contain;
   background-image: url(../images/kaufman-triangle.svg);
 }
 
@@ -330,7 +334,7 @@
 /*Ячейки заголовка Второго столбца*/
 .footer__column-heading {
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
@@ -339,10 +343,15 @@
 /*Ячейки текста Второго столбца*/
 .footer__column-links {
   padding: 0;
-  margin: 0 0 16px;
+  margin: 20px 0 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.footer__navigation {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 /*Текст Второго и Третьего столбца*/
 .footer__column-link {
@@ -352,6 +361,8 @@
   font-size: 18px;
   font-weight: normal;
   list-style-type: none;
+  text-decoration: none;
+  color: white;
 }
 
 /*Ячейки текста Третьего столбца*/
@@ -360,15 +371,4 @@
   padding: 0;
   height: 16px;
   width: 16px;
-}
-/*Модификатор ссылок в footer*/
-.footer__column-link_text {
-  text-decoration: none;
-  color: white;
-  list-style-type: none;
-}
-/*Модификатор ссылок в page, кроме footer*/
-.link_text {
-  text-decoration: none;
-  color: #2f80ed;
 }
